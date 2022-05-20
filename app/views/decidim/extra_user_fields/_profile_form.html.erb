@@ -92,10 +92,10 @@
     <%= f.text_field :referal_agent_number %>
   </div>
 </div>
+
 <div class="extra-user-fields__section">
   <h4>Organizations & NGO</h4>
-    <%= hidden_field_tag('user[is_organization]', "0", id: "_hidden") -%>
-    <%= check_box_tag 'user[is_organization]', "1", false, id: "registration_user_is_organization", class: "extra-user-fields__checkbox-hack" -%>
+    <%= f.check_box :is_organization, {class: "extra-user-fields__checkbox-hack", label: false} %>
     <%= f.label :is_organization %>
 
     <div class="extra-user-fields__organization_fields">
@@ -133,8 +133,7 @@
           <%= f.collection_select :org_operating_scope, f.object.operating_scope_options_for_select, :first, :last %>
       </div>
 
-      <%= hidden_field_tag('user[is_non_profit]', "0", id: "_hidden") -%>
-      <%= check_box_tag 'user[is_non_profit]', "1", false, id: "registration_user_is_non_profit", class: "extra-user-fields__checkbox-hack--is_non_profit" -%>
+      <%= f.check_box :is_non_profit, {class: "extra-user-fields__checkbox-hack--is_non_profit", label: false} %>
       <%= f.label :is_non_profit %>
 
       <div class="extra-user-fields__non_profit_fields">

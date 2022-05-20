@@ -95,7 +95,7 @@
 
 <div class="extra-user-fields__section">
   <h4>Organizations & NGO</h4>
-    <%= f.check_box :is_organization, {id: "registration_user_is_organization", class: "extra-user-fields__checkbox-hack", label: false} %>
+    <%= f.check_box :is_organization, {class: "extra-user-fields__checkbox-hack", label: false} %>
     <%= f.label :is_organization %>
 
     <div class="extra-user-fields__organization_fields">
@@ -133,7 +133,7 @@
           <%= f.collection_select :org_operating_scope, f.object.operating_scope_options_for_select, :first, :last %>
       </div>
 
-      <%= f.check_box :is_non_profit, {id: "registration_user_is_non_profit", class: "extra-user-fields__checkbox-hack--is_non_profit", label: false} %>
+      <%= f.check_box :is_non_profit, {class: "extra-user-fields__checkbox-hack--is_non_profit", label: false} %>
       <%= f.label :is_non_profit %>
 
       <div class="extra-user-fields__non_profit_fields">

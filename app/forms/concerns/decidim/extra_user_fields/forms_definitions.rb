@@ -42,8 +42,7 @@ module Decidim
         validates :province, presence: true
         validates :zip_code, presence: true
         validates :referal_text, presence: true
-        validate :presence_if_organization, :presence_if_organization
-
+        validate :presence_if_organization, :presence_if_non_profit
 
       end
       
