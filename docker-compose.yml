@@ -1,0 +1,14 @@
+version: "3"
+services:
+  pg:
+    image: postgres:14
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=my-insecure-password
+      - POSTGRES_USER=decidim
+      - POSTGRES_DB=decidim_module_mkutano_extra_user_fields_development_app_development
+    ports:
+      - 5432:5432
+volumes:
+  pg-data: {}
