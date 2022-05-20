@@ -12,8 +12,8 @@ en:
         zip_code: Postal Code
         phone_number: Phone Number
         age: Age
-        referal_text: How did you hear about Mkutano (Social Media Marketing/Referral/Direcct Invitation/Other)?
-        referal_agent_number: Referral Agent Number
+        referral_type: How did you hear about Mkutano?
+        referral_agent_number: Referral Agent Number
         is_organization: Are you representing an organization?
         org_name: Organization name
         org_address_1: Address 1
@@ -33,9 +33,25 @@ en:
       extra_user_fields:
         name: ExtraUserFields
     extra_user_fields:
+      headings:
+        personal: About you
+        address: Where are you based?
+        referral: How did you get here?
+        organization: Organization, Company or NGO?
+        organization_address: Professional address
+        organization_details: Organization details
+        password: Setup your password
+        public_infos: Public information
+      messages: 
+        registered_as_individual: "You are registering as an individual"
       admin:
         exports:
           users: Participants
+      referral:
+        social: Social Media Marketing
+        referral: Referral
+        direct: Direct
+        other: Other
       ages:
         teenager: Teenager
         twenties: 20s

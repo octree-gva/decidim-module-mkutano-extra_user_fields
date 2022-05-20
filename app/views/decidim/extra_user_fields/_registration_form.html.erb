@@ -50,7 +50,7 @@
 }
 </style>
 <div class="extra-user-fields__section">
-  <h4>About you</h4>
+  <h4><%= t('decidim.extra_user_fields.headings.personal') %></h4>
   <div class="field">
     <%= f.text_field :first_name %>
   </div>
@@ -65,7 +65,7 @@
   </div>
 </div>
 <div class="extra-user-fields__section">
-  <h4>About your location</h4>
+  <h4><%= t('decidim.extra_user_fields.headings.address') %></h4>
   <div class="field">
     <%= f.text_field :address_1 %>
   </div>
@@ -84,23 +84,23 @@
 </div>
 
 <div class="extra-user-fields__section">
-  <h4>Help us to spread the world</h4>
+  <h4><%= t('decidim.extra_user_fields.headings.referral') %></h4>
   <div class="field">
-    <%= f.text_area :referal_text, rows: 7 %>
+    <%= f.collection_select :referral_type, f.object.referral_options_for_select, :first, :last %>
   </div>
   <div class="field">
-    <%= f.text_field :referal_agent_number %>
+    <%= f.text_field :referral_agent_number %>
   </div>
 </div>
 
 <div class="extra-user-fields__section">
-  <h4>Organizations & NGO</h4>
+  <h4><%= t('decidim.extra_user_fields.headings.organization') %></h4>
     <%= f.check_box :is_organization, {class: "extra-user-fields__checkbox-hack", label: false} %>
     <%= f.label :is_organization %>
 
     <div class="extra-user-fields__organization_fields">
       <div class="field">
-        <h5>Org. Address</h5>
+        <h5><%= t('decidim.extra_user_fields.headings.organization_address') %></h5>
       </div>
       <div class="field">
           <%= f.text_field :org_name %>
@@ -121,7 +121,7 @@
           <%= f.text_field :org_zip_code %>
       </div>
       <div class="field">
-        <h5>Org. Informations</h5>
+        <h5><%= t('decidim.extra_user_fields.headings.organization_details') %></h5>
       </div>
       <div class="field">
           <%= f.number_field :org_year_started %>
@@ -148,11 +148,11 @@
 
     <div class="extra-user-fields__individual_fields">
       <div class="field">
-          🙋🏾‍♀️ Your are registering as an individual
+        <%= t('decidim.extra_user_fields.messages.registered_as_individual') %>
       </div>
     </div>
 
 </div>
 <div class="extra-user-fields__section">
-  <h4>Setup your password</h4>
-  </div>
+  <h4><%= t('decidim.extra_user_fields.headings.password') %></h4>
+</div>

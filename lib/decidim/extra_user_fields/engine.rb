@@ -13,6 +13,7 @@ module Decidim
 
       DEFAULT_AGE_OPTIONS = [:teenager, :twenties, :thirties, :fourties, :fifties, :sixties, :seventies, :older].freeze
       DEFAULT_OPERATING_SCOPE = [:national, :provincial, :region, :city].freeze
+      DEFAULT_REFERRAL_OPTIONS = [:social, :referral, :direct, :other].freeze
 
       routes do
         # Add engine routes here

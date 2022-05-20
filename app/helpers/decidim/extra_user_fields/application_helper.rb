@@ -5,6 +5,11 @@ module Decidim
     # Custom helpers, scoped to the extra_user_fields engine.
     #
     module ApplicationHelper
+      def referral_options_for_select
+        Decidim::ExtraUserFields::Engine::DEFAULT_REFERRAL_OPTIONS.map do |referral|
+          [referral, I18n.t(referral, scope: "decidim.extra_user_fields.referral")]
+        end
+      end
       def age_options_for_select
         Decidim::ExtraUserFields::Engine::DEFAULT_AGE_OPTIONS.map do |age|
           [age, I18n.t(age, scope: "decidim.extra_user_fields.ages")]

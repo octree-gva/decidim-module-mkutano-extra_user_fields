@@ -51,8 +51,8 @@ module Decidim
           zip_code: @form.zip_code,
           phone_number: @form.phone_number,
           age: @form.age,
-          referal_text: @form.referal_text,
-          referal_agent_number: @form.referal_agent_number,
+          referral_type: @form.referral_type,
+          referral_agent_number: @form.referral_agent_number,
           is_organization: @form.is_organization,
                             
           org_name: @form.org_name,

@@ -18,9 +18,9 @@ module Decidim
         attribute :province, String
         attribute :zip_code, String
         attribute :phone_number, String
-        attribute :age, String # see DEFAULT_AGE_OPTIONS
-        attribute :referal_text, String
-        attribute :referal_agent_number, String
+        attribute :age, String 
+        attribute :referral_type, String
+        attribute :referral_agent_number, String
         attribute :is_organization, String # "1"=true, "0"=false
 
         attribute :org_name, String
@@ -41,7 +41,7 @@ module Decidim
         validates :city, presence: true
         validates :province, presence: true
         validates :zip_code, presence: true
-        validates :referal_text, presence: true
+        validates :referral_type, presence: true
         validate :presence_if_organization, :presence_if_non_profit
 
       end
@@ -74,8 +74,8 @@ module Decidim
         self.zip_code = extended_data[:zip_code]
         self.phone_number = extended_data[:phone_number] if extended_data[:phone_number].present?
         self.age = extended_data[:age] 
-        self.referal_text = extended_data[:referal_text] 
-        self.referal_agent_number = extended_data[:referal_agent_number] if extended_data[:referal_agent_number].present?
+        self.referral_type = extended_data[:referral_type] 
+        self.referral_agent_number = extended_data[:referral_agent_number] if extended_data[:referral_agent_number].present?
         self.is_organization = "-"
         self.is_organization = extended_data[:is_organization] if extended_data[:is_organization].present?
         self.org_name = extended_data[:org_name]
