@@ -11,7 +11,8 @@ module Decidim
     class Engine < ::Rails::Engine
       isolate_namespace Decidim::ExtraUserFields
 
-      DEFAULT_GENDER_OPTIONS = [:male, :female, :other].freeze
+      DEFAULT_AGE_OPTIONS = [:teenager, :twenties, :thirties, :fourties, :fifties, :sixties, :seventies, :older].freeze
+      DEFAULT_OPERATING_SCOPE = [:national, :provincial, :region, :city].freeze
 
       routes do
         # Add engine routes here

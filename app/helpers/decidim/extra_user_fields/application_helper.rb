@@ -5,9 +5,15 @@ module Decidim
     # Custom helpers, scoped to the extra_user_fields engine.
     #
     module ApplicationHelper
-      def gender_options_for_select
-        Decidim::ExtraUserFields::Engine::DEFAULT_GENDER_OPTIONS.map do |gender|
-          [gender, I18n.t(gender, scope: "decidim.extra_user_fields.genders")]
+      def age_options_for_select
+        Decidim::ExtraUserFields::Engine::DEFAULT_AGE_OPTIONS.map do |age|
+          [age, I18n.t(age, scope: "decidim.extra_user_fields.ages")]
+        end
+      end
+
+      def operating_scope_options_for_select
+        Decidim::ExtraUserFields::Engine::DEFAULT_OPERATING_SCOPE.map do |scope|
+          [scope, I18n.t(scope, scope: "decidim.extra_user_fields.operating_scopes")]
         end
       end
     end
