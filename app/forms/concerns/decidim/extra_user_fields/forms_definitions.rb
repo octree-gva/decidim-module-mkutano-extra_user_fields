@@ -48,7 +48,7 @@ module Decidim
       
 
       def presence_if_organization
-        return unless is_organization
+        return unless is_organization == "1"
         errors.add(:org_city, "is required") if org_city.blank?
         errors.add(:org_province, "is required") if org_province.blank?
         errors.add(:org_zip_code, "is required") if org_zip_code.blank?
@@ -58,7 +58,7 @@ module Decidim
       end
 
       def presence_if_non_profit
-        return unless is_organization && is_non_profit 
+        return unless is_organization == "1" && is_non_profit == "1"
         errors.add(:non_profit_audience, "is required") if non_profit_audience.blank?
         errors.add(:non_profit_services, "is required") if non_profit_services.blank?
       end
