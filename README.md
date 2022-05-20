@@ -1,4 +1,20 @@
+<h1 align="center"><img src="https://github.com/octree-gva/meta/blob/main/decidim/static/header.png?raw=true" alt="Decidim - Octree Participatory democracy on a robust and open source solution"></h1>
+<h4 align="center">
+    <a href="https://www.octree.ch">Octree</a> |
+    <a href="https://octree.ch/en/contact-us/">Contact Us</a> |
+    <a href="https://blog.octree.ch">Our Blog (FR)</a><br/><br/>
+    <a href="https://decidim.org">Decidim</a> |
+    <a href="https://docs.decidim.org/en/">Decidim Docs</a> |
+    <a href="https://meta.decidim.org">Participatory Governance (meta decidim)</a><br/><br/>
+    <a href="https://matrix.to/#/+decidim:matrix.org">Decidim Community (Matrix+Element.io)</a> |
+    <a href="https://github.com/PopulateTools/decidim-module-extra_user_fields">Original Sources</a>
+</h4>
+
+
 # Decidim::ExtraUserFields
+
+This is a fork from [decidim-module-extra_user_fields](https://github.com/PopulateTools/decidim-module-extra_user_fields), developed by [Populate Tools](http://populate.tools). This repository adapt the fields to match needs of the Mkutano community, Canada.
+
 
 * Allows to collect and manage some extra user fields on registration and profile edition.
 * Adds a link in admin participants panel to download users of organization in several formats.
@@ -7,9 +23,9 @@
 
 Add this line to your application's Gemfile:
 
-For Decidim 0.24:
+Only Decidim 0.24 is supported:
 ```ruby
-gem "decidim-extra_user_fields", git: "https://github.com/PopulateTools/decidim-module-extra_user_fields", branch: "release/0.24-stable"
+gem "decidim-extra_user_fields", git: "https://github.com/octree-gva/decidim-module-mkutano-extra_user_fields", branch: "release/0.24-stable"
 ```
 
 And then execute:
@@ -20,8 +36,13 @@ bundle
 
 ## Contributing
 
-See [Decidim](https://github.com/decidim/decidim).
+We are not ready yet for contributions.
 
 ## License
 
-This engine is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+This engine is distributed under the [GNU AFFERO GENERAL PUBLIC LICENSE](LICENSE.md)
+
+<br /><br />
+<p align="center">
+    <img src="https://raw.githubusercontent.com/octree-gva/meta/main/decidim/static/octree_and_decidim.png" height="90" alt="Decidim Installation by Octree" />
+</p>
