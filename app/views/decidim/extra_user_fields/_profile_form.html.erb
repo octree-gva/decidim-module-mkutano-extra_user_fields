@@ -1,4 +1,156 @@
-<%= f.date_field :date_of_birth %>
-<%= f.collection_select :gender, f.object.gender_options_for_select, :first, :last %>
-<%= f.custom_country_select :country %>
-<%= f.text_field :postal_code %>
+<style>
+:root {
+  --extra-user-fields-margin: 1rem;
+}
+@media print, screen and (min-width: 40em){
+  :root {
+    --extra-user-fields-margin: 1.5rem;
+  }
+}
+.extra-user-fields__section{
+    margin: 32px calc(-1 * var(--extra-user-fields-margin));
+}
+.extra-user-fields__section h4{
+  padding: 12px var(--extra-user-fields-margin);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.extra-user-fields__section .field {
+  margin: 0 var(--extra-user-fields-margin);
+}
+.extra-user-fields__checkbox-hack {
+  margin-left: var(--extra-user-fields-margin);
+}
+.extra-user-fields__checkbox-hack ~ .extra-user-fields__organization_fields {
+  display: none;
+}
+.extra-user-fields__checkbox-hack:checked ~ .extra-user-fields__organization_fields {
+  display: block;
+}
+
+.extra-user-fields__checkbox-hack ~ .extra-user-fields__individual_fields {
+  display: block;
+}
+.extra-user-fields__checkbox-hack:checked ~ .extra-user-fields__individual_fields {
+  display: none;
+}
+
+.extra-user-fields__checkbox-hack--is_non_profit {
+    margin-left: var(--extra-user-fields-margin);
+
+}
+.extra-user-fields__checkbox-hack--is_non_profit ~ .extra-user-fields__non_profit_fields{
+  display: none;
+}
+
+.extra-user-fields__checkbox-hack--is_non_profit:checked ~ .extra-user-fields__non_profit_fields{
+  display: block;
+}
+</style>
+<div class="extra-user-fields__section">
+  <h4><%= t('decidim.extra_user_fields.headings.personal') %></h4>
+  <div class="field">
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.collection_select :age, f.object.age_options_for_select, :first, :last %>
+  </div>
+  <div class="field">
+    <%= f.telephone_field :phone_number %>
+  </div>
+</div>
+<div class="extra-user-fields__section">
+  <h4><%= t('decidim.extra_user_fields.headings.address') %></h4>
+  <div class="field">
+    <%= f.text_field :address_1 %>
+  </div>
+  <div class="field">
+    <%= f.text_field :address_2 %>
+  </div>
+  <div class="field">
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.text_field :province %>
+  </div>
+</div>
+
+<div class="extra-user-fields__section">
+  <h4><%= t('decidim.extra_user_fields.headings.referral') %></h4>
+  <div class="field">
+    <%= f.collection_select :referral_type, f.object.referral_options_for_select, :first, :last %>
+  </div>
+  <div class="field">
+    <%= f.text_field :referral_agent_number %>
+  </div>
+</div>
+
+<div class="extra-user-fields__section">
+  <h4><%= t('decidim.extra_user_fields.headings.organization') %></h4>
+    <%= f.check_box :is_organization, {class: "extra-user-fields__checkbox-hack", label: false} %>
+    <%= f.label :is_organization %>
+
+    <div class="extra-user-fields__organization_fields">
+      <div class="field">
+        <h5><%= t('decidim.extra_user_fields.headings.organization_address') %></h5>
+      </div>
+      <div class="field">
+          <%= f.text_field :org_name %>
+      </div>
+      <div class="field">
+          <%= f.text_field :org_address_1 %>
+      </div>
+      <div class="field">
+          <%= f.text_field :org_address_2 %>
+      </div>
+      <div class="field">
+          <%= f.text_field :org_city %>
+      </div>
+      <div class="field">
+          <%= f.text_field :org_province %>
+      </div>
+      <div class="field">
+          <%= f.text_field :org_zip_code %>
+      </div>
+      <div class="field">
+        <h4><%= t('decidim.extra_user_fields.headings.organization_details') %></h4>
+      </div>
+      <div class="field">
+          <%= f.number_field :org_year_started %>
+      </div>
+      <div class="field">
+          <%= f.url_field :org_website %>
+      </div>
+      <div class="field">
+          <%= f.collection_select :org_operating_scope, f.object.operating_scope_options_for_select, :first, :last %>
+      </div>
+
+      <%= f.check_box :is_non_profit, {class: "extra-user-fields__checkbox-hack--is_non_profit", label: false} %>
+      <%= f.label :is_non_profit %>
+
+      <div class="extra-user-fields__non_profit_fields">
+        <div class="field">
+            <%= f.text_area :non_profit_services, rows: 3 %>
+        </div>
+        <div class="field">
+            <%= f.text_area :non_profit_audience, rows: 7 %>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-user-fields__individual_fields">
+      <div class="field">
+        <%= t('decidim.extra_user_fields.messages.registered_as_individual') %>
+      </div>
+    </div>
+
+</div>
+<div class="extra-user-fields__section">
+  <h4><%= t('decidim.extra_user_fields.headings.public_infos') %></h4>
+</div>

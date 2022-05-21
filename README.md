@@ -33,6 +33,31 @@ And then execute:
 ```bash
 bundle
 ```
+## Local development
+Run if you haven't already:
+```bash
+bundle
+```
+
+And then
+```bash
+    rake decidim:generate_external_development_app
+```
+
+Run a postgres database
+```
+docker-compose up -d
+```
+
+Setup and run the decidim development server
+```
+cd development_app
+export DATABASE_USERNAME=decidim DATABASE_PASSWORD=my-insecure-password RAILS_ENV=development
+rails db:migrate
+rails db:seed
+rails s
+```
+Access your local environment [localhost:3000](http://localhost:3000)
 
 ## Contributing
 

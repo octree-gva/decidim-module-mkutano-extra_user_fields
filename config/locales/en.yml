@@ -3,19 +3,66 @@ en:
   activemodel:
     attributes:
       user:
-        country: Country
-        date_of_birth: Date of birth
-        gender: Gender
-        postal_code: Postal code
+        first_name: First Name
+        last_name: Last Name
+        address_1: Address 1
+        address_2: Address 2
+        city: City
+        province: Province
+        zip_code: Postal Code
+        phone_number: Phone Number
+        age: Age
+        referral_type: How did you hear about Mkutano?
+        referral_agent_number: Referral Agent Number
+        is_organization: Are you representing an organization?
+        org_name: Organization name
+        org_address_1: Address 1
+        org_address_2: Address 2
+        org_city: City
+        org_province: Province
+        org_zip_code: Postal Code
+        org_website: Website
+        org_year_started: Year Started
+        org_operating_scope: Operating Scope
+        is_non_profit: My organization is non profit.
+        non_profit_services: Services
+        non_profit_audience: Audience
+
   decidim:
     components:
       extra_user_fields:
         name: ExtraUserFields
     extra_user_fields:
+      headings:
+        personal: About you
+        address: Where are you based?
+        referral: How did you get here?
+        organization: Organization, Company or NGO?
+        organization_address: Professional address
+        organization_details: Organization details
+        password: Setup your password
+        public_infos: Public information
+      messages: 
+        registered_as_individual: "You are registering as an individual"
       admin:
         exports:
           users: Participants
-      genders:
-        female: Female
-        male: Male
+      referral:
+        social: Social Media Marketing
+        referral: Referral
+        direct: Direct
         other: Other
+      ages:
+        teenager: Teenager
+        twenties: 20s
+        thirties: 30s
+        fourties: 40s
+        fifties: 50s
+        sixties: 60s
+        seventies: 70s
+        older: Older
+      operating_scopes:
+        national: National
+        provincial: Provincial
+        region: Region
+        city: City

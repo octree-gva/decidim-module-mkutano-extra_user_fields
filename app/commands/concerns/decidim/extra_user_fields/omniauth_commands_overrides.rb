@@ -42,10 +42,32 @@ module Decidim
 
       def extended_data
         @extended_data ||= (@user&.extended_data || {}).merge(
-          country: form.country,
-          postal_code: form.postal_code,
-          date_of_birth: form.date_of_birth,
-          gender: form.gender
+          first_name: @form.first_name,
+          last_name: @form.last_name,
+          address_1: @form.address_1,
+          address_2: @form.address_2,
+          city: @form.city,
+          province: @form.province,
+          zip_code: @form.zip_code,
+          phone_number: @form.phone_number,
+          age: @form.age,
+          referral_type: @form.referral_type,
+          referral_agent_number: @form.referral_agent_number,
+          is_organization: @form.is_organization,
+                            
+          org_name: @form.org_name,
+          org_address_1: @form.org_address_1,
+          org_address_2: @form.org_address_2,
+          org_city: @form.org_city,
+          org_province: @form.org_province,
+          org_zip_code: @form.org_zip_code,
+          org_website: @form.org_website,
+          org_year_started: @form.org_year_started,
+          org_operating_scope: @form.org_operating_scope,
+          is_non_profit: @form.is_non_profit,
+          non_profit_services: @form.non_profit_services,
+          non_profit_audience: @form.non_profit_audience,
+
         )
       end
     end
