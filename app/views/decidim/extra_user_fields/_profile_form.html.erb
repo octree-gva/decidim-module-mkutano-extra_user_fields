@@ -61,6 +61,9 @@
   <div class="field">
     <%= f.telephone_field :phone_number %>
   </div>
+  <div class="field">
+    <%= f.collection_select :identify_as_black, f.object.identify_as_black_options_for_select, :first, :last %>
+  </div>  
 </div>
 <div class="extra-user-fields__section">
   <h4><%= t('decidim.extra_user_fields.headings.address') %></h4>

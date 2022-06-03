@@ -18,6 +18,7 @@ module Decidim
         attribute :province, String
         attribute :zip_code, String
         attribute :phone_number, String
+        attribute :identify_as_black, String
         attribute :age, String 
         attribute :referral_type, String
         attribute :referral_agent_number, String
@@ -38,6 +39,7 @@ module Decidim
 
         validates :first_name, presence: true
         validates :last_name, presence: true
+        validates :identify_as_black, presence: true
         validates :city, presence: true
         validates :province, presence: true
         validates :zip_code, presence: true
@@ -73,6 +75,7 @@ module Decidim
         self.province = extended_data[:province]
         self.zip_code = extended_data[:zip_code]
         self.phone_number = extended_data[:phone_number] if extended_data[:phone_number].present?
+        self.identify_as_black = extended_data[:identify_as_black] if extended_data[:identify_as_black].present?
         self.age = extended_data[:age] 
         self.referral_type = extended_data[:referral_type] 
         self.referral_agent_number = extended_data[:referral_agent_number] if extended_data[:referral_agent_number].present?

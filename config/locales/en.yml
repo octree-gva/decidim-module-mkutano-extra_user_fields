@@ -11,6 +11,7 @@ en:
         province: Province
         zip_code: Postal Code
         phone_number: Phone Number
+        identify_as_black: Do you identify as Black? 
         age: Age
         referral_type: How did you hear about Mkutano?
         referral_agent_number: Referral Agent Number
@@ -52,6 +53,9 @@ en:
         referral: Referral
         direct: Direct
         other: Other
+      identify_as_black:
+        y: "Yes"
+        n: "No"
       ages:
         teenager: Teenager
         twenties: 20s
