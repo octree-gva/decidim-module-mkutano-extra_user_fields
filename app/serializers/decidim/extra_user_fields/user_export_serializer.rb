@@ -21,6 +21,7 @@ module Decidim
           :province,
           :zip_code,
           :phone_number,
+          :identify_as_black,
           :age,
           :referral_type,
           :referral_agent_number,
