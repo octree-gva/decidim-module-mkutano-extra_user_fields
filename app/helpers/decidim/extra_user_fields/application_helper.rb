@@ -15,6 +15,12 @@ module Decidim
           [age, I18n.t(age, scope: "decidim.extra_user_fields.ages")]
         end
       end
+      
+      def identify_as_black_options_for_select
+        Decidim::ExtraUserFields::Engine::DEFAULT_IDENTIFY_AS_BLACK_OPTIONS.map do |identify_as_black|
+          [identify_as_black, I18n.t(identify_as_black, scope: "decidim.extra_user_fields.identify_as_black")]
+        end
+      end
 
       def operating_scope_options_for_select
         Decidim::ExtraUserFields::Engine::DEFAULT_OPERATING_SCOPE.map do |scope|
