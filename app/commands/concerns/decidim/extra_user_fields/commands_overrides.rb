@@ -46,6 +46,7 @@ module Decidim
           province: @form.province,
           zip_code: @form.zip_code,
           phone_number: @form.phone_number,
+          identify_as_black: @form.identify_as_black,
           age: @form.age,
           referral_type: @form.referral_type,
           referral_agent_number: @form.referral_agent_number,
