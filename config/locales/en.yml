@@ -54,8 +54,8 @@ en:
         direct: Direct
         other: Other
       identify_as_black:
-        y: Yes
-        n: No
+        y: "Yes"
+        n: "No"
       ages:
         teenager: Teenager
         twenties: 20s
