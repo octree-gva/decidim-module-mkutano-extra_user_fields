@@ -49,7 +49,6 @@ module Decidim
           identify_as_black: @form.identify_as_black,
           age: @form.age,
           referral_type: @form.referral_type,
-          referral_agent_number: @form.referral_agent_number,
           is_organization: @form.is_organization,
 
                   
