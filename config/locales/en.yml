@@ -14,7 +14,6 @@ en:
         identify_as_black: Do you identify as Black? 
         age: Age
         referral_type: How did you hear about Mkutano?
-        referral_agent_number: Referral Agent Number
         is_organization: Are you representing an organization?
         org_name: Organization name
         org_address_1: Address 1
