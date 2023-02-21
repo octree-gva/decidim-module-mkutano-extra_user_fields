@@ -10,6 +10,11 @@ module Decidim
           [referral, I18n.t(referral, scope: "decidim.extra_user_fields.referral")]
         end
       end
+      def province_options_for_select
+        Decidim::ExtraUserFields::Engine::DEFAULT_PROVINCE_OPTIONS.map do |province|
+          [province, I18n.t(province, scope: "decidim.extra_user_fields.province")]
+        end
+      end
       def age_options_for_select
         Decidim::ExtraUserFields::Engine::DEFAULT_AGE_OPTIONS.map do |age|
           [age, I18n.t(age, scope: "decidim.extra_user_fields.ages")]

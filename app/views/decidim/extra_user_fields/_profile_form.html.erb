@@ -80,7 +80,7 @@
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.text_field :province %>
+    <%= f.collection_select :province, f.object.province_options_for_select, :first, :last %>
   </div>
 </div>
 
