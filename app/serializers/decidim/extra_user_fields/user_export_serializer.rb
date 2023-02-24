@@ -24,7 +24,6 @@ module Decidim
           :identify_as_black,
           :age,
           :referral_type,
-          :referral_agent_number,
           :is_organization,
           :org_name,
           :org_address_1,

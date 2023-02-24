@@ -6,8 +6,8 @@ require "decidim/extra_user_fields/version"
 
 Gem::Specification.new do |s|
   s.version = Decidim::ExtraUserFields.version
-  s.authors = ["Eduardo Martínez", "Hadrien Froger"]
-  s.email = ["entantoencuanto.rb@gmail.com", "hadrien@octree.ch"]
+  s.authors = ["Hadrien Froger"]
+  s.email = ["hadrien@octree.ch"]
   s.license = "AGPL-3.0"
   s.homepage = "https://github.com/octree-gva/decidim-module-mkutano-extra_user_fields"
   s.required_ruby_version = ">= 2.7"

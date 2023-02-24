@@ -21,7 +21,6 @@ module Decidim
         attribute :identify_as_black, String
         attribute :age, String 
         attribute :referral_type, String
-        attribute :referral_agent_number, String
         attribute :is_organization, String # "1"=true, "0"=false
 
         attribute :org_name, String
@@ -78,7 +77,6 @@ module Decidim
         self.identify_as_black = extended_data[:identify_as_black] if extended_data[:identify_as_black].present?
         self.age = extended_data[:age] 
         self.referral_type = extended_data[:referral_type] 
-        self.referral_agent_number = extended_data[:referral_agent_number] if extended_data[:referral_agent_number].present?
         self.is_organization = "-"
         self.is_organization = extended_data[:is_organization] if extended_data[:is_organization].present?
         self.org_name = extended_data[:org_name]

@@ -5,9 +5,9 @@ services:
     volumes:
       - pg-data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=my-insecure-password
+      - POSTGRES_PASSWORD=TEST-aWLIRsv8QHhxTFNqRb7EScj8erNSdDTYs0vpZ8jE6rwK
       - POSTGRES_USER=decidim
-      - POSTGRES_DB=decidim_module_mkutano_extra_user_fields_development_app_development
+      - POSTGRES_DB=decidim_test
     ports:
       - 5432:5432
 volumes:
