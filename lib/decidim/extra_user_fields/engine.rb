@@ -42,6 +42,9 @@ module Decidim
 
           Decidim::RegistrationForm.class_eval do
             include ExtraUserFields::FormsDefinitions
+            def self.require_password_on_accepting
+              Decidim::User.require_password_on_accepting
+            end
           end
 
           Decidim::OmniauthRegistrationForm.class_eval do

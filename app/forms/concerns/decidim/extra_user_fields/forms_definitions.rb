@@ -10,6 +10,7 @@ module Decidim
 
       included do
         include ::Decidim::ExtraUserFields::ApplicationHelper
+        attribute :invitation_token, String
         attribute :first_name, String
         attribute :last_name, String
         attribute :address_1, String
@@ -46,7 +47,8 @@ module Decidim
         validate :presence_if_organization, :presence_if_non_profit
 
       end
-      
+
+     
 
       def presence_if_organization
         return unless is_organization == "1"
@@ -66,6 +68,7 @@ module Decidim
 
       def map_model(model)
         extended_data = model.extended_data.with_indifferent_access
+        self.invitation_token = extended_data[:invitation_token] if extended_data[:invitation_token].present?
         self.first_name = extended_data[:first_name]
         self.last_name = extended_data[:last_name]
         self.address_1 = extended_data[:address_1] if extended_data[:address_1].present?
